@@ -35,6 +35,7 @@ SequenceModeling: Chọn mô hình nhận diện chữ cái tuần tự, ở đ�
 
 Prediction: Chọn CTC làm loss function để đánh giá mô hình mỗi khi train để phù hợp với việc tính loss cho từng chữ digital.
 num_iter: Số iteration mà mô hình sẽ lặp lại để train qua số lượng ảnh cần train.
+
 valInterval: Khi đã train được đúng số iteration cần lặp lại, sẽ có 1 iteration là mô hình sẽ trải qua giai đoạn đánh giá (validation) để tinh chỉnh lại weight trước khi tiếp tục train tiếp. (ở đây, cứ train được 400 iteration là sẽ có 1 validation iteration, rồi tiếp tục cứ lặp lại đến hết).
 # Kết quả train
 
