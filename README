@@ -1,1 +1,10 @@
-pbl5
+# Tập dữ liệu
+Tạo một custom_word.txt viết ra các từ ngẫu nhiên, mỗi từ có độ dài ngẫu nhiên từ 5 đến 10, được tạo ra bằng cách chọn các ký tự có trong bảng chữ cái Tiếng Việt gồm số, chữ hoa, chữ thường, chữ có dấu.
+
+
+ Dùng Text Recognition Data Generator  để tạo tập train từ các từ trong custom_word.txt được tạo từ trước.
+
+Đọc các nhãn (labels) đã tạo bởi công cụ tạo nhãn TRDG, có định dạng tương tự như tên các tệp hình ảnh trong thư mục.
+
+Chuyển đổi định dạng các nhãn này từ .txt sang .csv để sử dụng cho quá trình huấn luyện.
+
