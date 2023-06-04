@@ -5,10 +5,12 @@ Tạo một custom_word.txt viết ra các từ ngẫu nhiên, mỗi từ có đ
  
  Dùng Text Recognition Data Generator  để tạo tập train từ các từ trong custom_word.txt được tạo từ trước.
  
+![Ảnh chụp màn hình 2023-06-04 221347](https://github.com/tienhung36/modelOCR/assets/106159669/83d242f4-4536-4bfc-b4a3-1e9baf282f8a)
 
  
  Đọc các nhãn (labels) đã tạo bởi công cụ tạo nhãn TRDG, có định dạng tương tự như tên các tệp hình ảnh trong thư mục.
 
+![Ảnh chụp màn hình 2023-06-04 221407](https://github.com/tienhung36/modelOCR/assets/106159669/4e957add-f508-4136-9f15-39c3bd6f2ddd)
 
 
 Chuyển đổi định dạng các nhãn này từ .txt sang .csv để sử dụng cho quá trình huấn luyện.
@@ -50,5 +52,10 @@ valInterval: Khi đã train được đúng số iteration cần lặp lại, s�
 # Áp dụng kết quả train vào model
 Sau khi pre_trained model, ta thu được file trọng số để áp dụng vào mô hình để giải quyết bài toán
 
+![Ảnh chụp màn hình 2023-06-04 221437](https://github.com/tienhung36/modelOCR/assets/106159669/16bbe0cc-9e17-42f0-b7a2-5b93d10bd6d2)
+
+
 Sử dụng mô hình để nhận dạng gộp các box cùng 1 hàng thành text
+
+![Ảnh chụp màn hình 2023-06-04 221502](https://github.com/tienhung36/modelOCR/assets/106159669/fc4bed7a-7b96-452e-9071-d66b5c2d982b)
 
