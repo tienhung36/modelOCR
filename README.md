@@ -19,6 +19,7 @@ Tương tự cho tập val để sử dụng cho đánh giá mô hình
 
 Sau khi có được dữ liệu và phân chia dữ liệu. Nhóm tiến hành tinh chỉnh các tham số để pre_trained model.
 
+
 ![Ảnh chụp màn hình 2023-06-04 220401](https://github.com/tienhung36/modelOCR/assets/106159669/debb9794-bcad-4e9a-bbdd-aad00149a51c)
 
 FT: Finetune, là mô hình pretrained sẽ được freeze toàn bộ các lớp detection layer, đảm bảo quá trình training không ảnh hưởng đến mô hình nhận diện vị trí chữ digital đã được pretrained.
@@ -26,7 +27,8 @@ FeatureExtraction: Chọn mô hình trích xuất đặc trưng VGG để áp d�
 freeze_FeatureExtraction: Lớp VGG này cũng sẽ được freeze để chỉ dùng kết quả trích xuất làm mục tiêu nhận diện thay vì sẽ bị đạo hàm weight ngược vào lại.
 SequenceModeling: Chọn mô hình nhận diện chữ cái tuần tự, ở đây BiLSTM là 1 trong các dạng RNN
 
-![Ảnh chụp màn hình 2023-06-04 220434](https://github.com/tienhung36/modelOCR/assets/106159669/96e4a14a-37af-43e3-adf0-c6112591f03b)
+![Ảnh chụp màn hình 2023-06-04 220326](https://github.com/tienhung36/modelOCR/assets/106159669/cc3c6401-b884-4c77-8d0c-352ac612400f)
+
 
 Prediction: Chọn CTC làm loss function để đánh giá mô hình mỗi khi train để phù hợp với việc tính loss cho từng chữ digital.
 num_iter: Số iteration mà mô hình sẽ lặp lại để train qua số lượng ảnh cần train.
@@ -38,6 +40,11 @@ valInterval: Khi đã train được đúng số iteration cần lặp lại, s�
 ![Ảnh chụp màn hình 2023-06-04 220530](https://github.com/tienhung36/modelOCR/assets/106159669/7ad53c83-1c0f-4b78-94d0-d7f9cb88bcef)
 
 Đánh giá mô hình 
+
+![Ảnh chụp màn hình 2023-06-04 220401](https://github.com/tienhung36/modelOCR/assets/106159669/debb9794-bcad-4e9a-bbdd-aad00149a51c)
+
+![Ảnh chụp màn hình 2023-06-04 220434](https://github.com/tienhung36/modelOCR/assets/106159669/96e4a14a-37af-43e3-adf0-c6112591f03b)
+
 
 # Áp dụng kết quả train vào model
 Sau khi pre_trained model, ta thu được file trọng số để áp dụng vào mô hình để giải quyết bài toán
